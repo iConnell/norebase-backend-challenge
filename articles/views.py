@@ -1,5 +1,3 @@
-from django.shortcuts import render
-from django.shortcuts import get_object_or_404
 from .models import Article, Like
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
@@ -25,6 +23,7 @@ def get_like_count(request, article_id):
     )
 
 
+@api_view(http_method_names=["POST"])
 def like_article(request, article_id):
     article = Article.objects.filter(pk=article_id).first()
     if not article:
