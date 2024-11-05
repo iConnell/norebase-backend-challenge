@@ -12,6 +12,7 @@ from django.urls import reverse
 @renderer_classes([JSONRenderer])
 def home(request):
     response_data = {
+        "github_link": "https://github.com/iConnell/norebase-backend-challenge",
         "routes": [
             {
                 "name": "Get Like Count",
@@ -27,7 +28,7 @@ def home(request):
                     reverse("like_article", kwargs={"article_id": 1})
                 ),
             },
-        ]
+        ],
     }
 
     return Response(response_data, status=status.HTTP_200_OK)
