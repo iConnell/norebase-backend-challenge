@@ -4,7 +4,6 @@
 
 - **Retrieve Like Count**: Get the current number of likes on an article.
 - **Like an Article**: Increment the like count of an article.
-- **Concurrency Safety**: Uses atomic increments to handle high traffic without race conditions.
 
 ## Tech Stack
 
