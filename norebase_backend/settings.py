@@ -79,7 +79,7 @@ WSGI_APPLICATION = "norebase_backend.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
+print(os.environ.get("DATABASE_URL"))
 DATABASES = {
     "default": dj_database_url.parse(os.environ.get("DATABASE_URL")),
 }
